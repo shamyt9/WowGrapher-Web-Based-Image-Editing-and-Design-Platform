@@ -1,0 +1,1130 @@
+/* ==============================MAIN CONTAINER EDITING STYLING============================================ */
+body {
+    background: url('../img/bg13.jpg');
+}
+#mainRow {
+    background: transparent;
+    padding: 20px;
+    height: 100%;
+}
+#mainBlurContainer {
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+
+.resultDownloadContainer {
+    border-radius: 5px;
+    object-fit: cover;
+}
+#downloadBtn {
+    background-color: #4caf50; /* Green background */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline-block */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 5px; /* Add border radius */
+    transition: background-color 0.3s; /* Add transition */
+}
+
+#downloadBtn:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+
+#downloadBtn:active {
+    background-color: #3e8e41; /* Darker background when button is clicked */
+}
+
+/* card container */
+.cardImg {
+    height: 910px;
+    overflow-y: auto;
+    padding: 30px;
+    background-color: rgba(244, 244, 244, 0.434);
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 1px white, inset -2px -2px 1px rgb(0, 0, 0),
+        10px 10px 1px rgba(244, 244, 244, 0.434);
+}
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+}
+.card {
+    border-radius: 10px;
+    box-shadow: inset 2px 2px white, 0 0 1px rgb(0, 0, 0);
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    margin-top: 5px;
+    padding: 5px;
+    object-fit: cover;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 196, 222, 1) 0%,
+        rgba(225, 255, 255, 1) 100%
+    );
+}
+.card:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    transition: 0.1s ease-out;
+    z-index: 10;
+}
+@media (max-width: 600px) {
+    .card {
+        height: 15vh;
+    }
+}
+
+/* ==============RESULT TEMPLATE 1 STYLING========================== */
+.report-container1 {
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 5px;
+
+    background-color: #fff;
+}
+
+.report-header1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #0056b3;
+}
+
+.institutionName1,
+.institutionAddress1,
+.passingYear1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -3px;
+}
+
+.studentDetail1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.result-table1 {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 0 10px 0 20px;
+}
+
+.th1 {
+    border: 1px solid #ddd;
+    padding: 12px;
+    background-color: #f2f2f2;
+}
+
+.td1 {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-section1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 20px;
+    gap: 5px;
+}
+
+.signature-section1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 20px;
+}
+/* =============TEMPLATE 2==================== */
+.report-container2 {
+    background-color: #fff;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 2px;
+}
+
+.report-header2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.institutionName2 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.institutionAddress2 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.passingYear2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.studentDetail2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.result-table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.th2 {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+.td2 {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+.grade-section2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    gap: 5px;
+}
+
+.signature-section2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+}
+/* ============TEMPLATE 3======================== */
+.report-container3 {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 5px solid #ffffff;
+    background: rgb(255, 255, 117);
+    overflow: hidden;
+
+    padding: 20px;
+}
+
+.report-header3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.institutionName3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.institutionAddress3,
+.passingYear3 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #6c757d;
+}
+
+.studentDetail3 {
+    font-size: 16px;
+    display: flex;
+    gap: 7px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.result-table3 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.th3 {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.td3 {
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    text-align: left;
+}
+
+.grade-section3 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    gap: 7px;
+}
+
+.signature-section3 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #6c757d;
+}
+/* ==============TEMPLATE 4 =============================== */
+.report-container4 {
+    background-color: #fff;
+    border-radius: 10px;
+
+    overflow: hidden;
+    width: 400px;
+    padding: 20px;
+}
+
+.report-header4 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.institutionName4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #2ecc71;
+}
+
+.institutionAddress4,
+.passingYear4 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #95a5a6;
+}
+
+.studentDetail4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 16px;
+    gap: 7px;
+    color: #34495e;
+}
+
+.result-table4 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.th4 {
+    border: 1px solid #ecf0f1;
+    padding: 10px;
+    text-align: left;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.td4 {
+    border: 1px solid #ecf0f1;
+    padding: 10px;
+    text-align: left;
+}
+
+.grade-section4 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    gap: 7px;
+    color: #e74c3c;
+}
+
+.signature-section4 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #95a5a6;
+}
+/* ==============TEMPLATE 5====================== */
+.report-container5 {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ecf0f1;
+}
+
+.report-header5 {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.institutionName5,
+.institutionAddress5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -3px;
+}
+.passingYear5 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: rgb(135, 135, 135);
+}
+
+.studentDetail5 {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.result-table5 {
+    width: 95%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.th5 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.td5 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-section5 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    padding: 0 20px;
+    gap: 5px;
+    color: #414141;
+}
+
+.signature-section5 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 20px;
+    color: #a3a3a3;
+}
+/* =============TEMPLATE 6==================== */
+.report-container6 {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #3498db, #2980b9);
+    color: #fff;
+    padding: 10px;
+}
+
+.report-header6 {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #2980b9;
+}
+
+.institutionName6,
+.institutionAddress6,
+.passingYear6 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: -3px;
+}
+.studentDetail6 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.result-table6 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.th6 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.td6 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-section6 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.signature-section6 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 20px;
+}
+/* ==========TEMPLATE 7=============== */
+.report-container7 {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 4px solid #3498db;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #45aaf2, #3498db);
+    color: #fff;
+    padding: 20px;
+}
+
+.report-header7 {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.institutionName7,
+.institutionName7,
+.institutionAddress7,
+.passingYear7 {
+    text-align: center;
+    margin-bottom: -3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.institutionName7 {
+    box-shadow: inset 1px 1px 1px white;
+}
+.passingYear7 {
+    box-shadow: inset -1px -1px 1px white;
+}
+
+.studentDetail7 {
+    font-size: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-table7 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.th7 {
+    border: 1px solid #d8d7d7;
+    padding: 12px;
+    text-align: left;
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.td7 {
+    border: 1px solid #d8d7d7;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-section7 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.signature-section7 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 20px;
+}
+/* ============TEMPLATE 8===================== */
+.report-container8 {
+    max-width: 800px;
+    margin: 50px auto;
+    border: 4px solid #3498db;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.report-header,
+.institutionName8,
+.institutionAddress8,
+.passingYear8,
+.studentDetail8,
+.th8,
+.td8,
+.grade-section8,
+.signature-section8 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.report-header8 {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid #2980b9;
+    margin-bottom: 20px;
+}
+
+.institutionName8,
+.institutionAddress8,
+.passingYear8 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.studentDetail8 {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-table8 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.th8 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.td8 {
+    border: 1px solid #3498db;
+    padding: 12px;
+    text-align: left;
+}
+
+.grade-section8 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.signature-section8 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 0 20px;
+}
+/* ===========TEMPLATE 9================= */
+.report-container9 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+
+    background-size: cover;
+
+    background: linear-gradient(
+        80deg,
+        rgba(247, 0, 255, 0.438) 31%,
+        rgba(253, 170, 45, 0.473) 69%
+    );
+
+    border: 10px solid white;
+}
+
+.report-header9 {
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institutionName9,
+.institutionAddress9,
+.passingYear9 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: -3px;
+}
+
+.studentDetail9 {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #333333;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.result-table9 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin-top: 20px;
+}
+.th9 {
+    background-color: #ababab;
+    color: #000000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.td9 {
+    padding: 12px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grade-section9,
+.signature-section9 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #333333;
+}
+/* ===========TEMPLATE 10-=============== */
+.report-container10 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    background: linear-gradient(135deg, #63d471 10%, #1d5e4d 90%);
+
+    border: 10px solid white;
+}
+
+.report-header10 {
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institutionName10,
+.institutionAddress10,
+.passingYear10 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #313131;
+    margin-bottom: -3px;
+}
+
+.studentDetail10 {
+    padding: 15px 10px 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #191919;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.result-table10 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin-top: 20px;
+}
+.th10 {
+    background-color: #ababab;
+    color: #000000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.td10 {
+    padding: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grade-section10,
+.signature-section10 {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #2a2929;
+}
+/* ============TEMPLATE 11================== */
+.report-container11 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    background: linear-gradient(45deg, #0f4c75, #bbe1fa);
+
+    border: 10px solid white;
+}
+
+.report-header11 {
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institutionName11,
+.institutionAddress11,
+.passingYear11 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #313131;
+    margin-bottom: -3px;
+}
+
+.studentDetail11 {
+    padding: 15px 10px 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #191919;
+    border-radius: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.result-table11 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin-top: 20px;
+}
+.th11 {
+    background-color: #ababab;
+    color: #000000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.td11 {
+    padding: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grade-section11,
+.signature-section11 {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #2a2929;
+}
+/* ==========TEMPLATE 12================== */
+.report-container12 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #0f4c75, #bbe1fa);
+
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.report-header12 {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institutionName12,
+.institutionAddress12,
+.passingYear12 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #313131;
+    margin-bottom: -3px;
+}
+
+.studentDetail12 {
+    padding: 15px 10px 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #dadada;
+    border-radius: 10px;
+    background-color: #0f4c75;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.result-table12 {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+    margin-top: 20px;
+}
+.th12 {
+    background-color: #ababab;
+    color: #000000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.td12 {
+    padding: 10px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 20px;
+    background-color: #0f4c75;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grade-section12,
+.signature-section12 {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #2a2929;
+}
+/* ===========TEMPLATE 13============== */
+.report-container13 {
+    max-width: 450px;
+    margin: 50px auto;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgb(168, 246, 255), rgb(255, 198, 198));
+}
+
+.report-header13 {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.institutionName13,
+.institutionAddress13,
+.passingYear13 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #313131;
+    margin-bottom: -3px;
+}
+
+.studentDetail13 {
+    margin-left: 2.5%;
+    width: 95%;
+    padding-left: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #282828;
+    border-radius: 10px;
+    background-color: #c1e6ff;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.result-table13 {
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+.th13 {
+    background-color: #f2f2f2;
+
+    color: #000000;
+    box-shadow: inset 1px 1px black, 1px 1px white;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.td13 {
+    padding: 5px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 20px;
+    background-color: #00c2fd;
+    font-weight: 500;
+    text-align: center;
+}
+
+.grade-section13,
+.signature-section13 {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: #2a2929;
+}

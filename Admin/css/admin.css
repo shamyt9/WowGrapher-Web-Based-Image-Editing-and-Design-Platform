@@ -1,0 +1,76 @@
+body {
+  background: url("../../img/bg11.jpg");
+    background-position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}
+#editabout
+{
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+   
+  }
+ 
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 58px 0 0;
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px 0 rgb(241, 60, 60), 0 2px 10px 0 rgb(229, 255, 0),inset -1px -1px white;
+  width: 240px;
+  z-index: 600;
+  background:transparent;
+  
+}
+
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.sidebar .active {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.show-author{
+  margin: 30px;
+
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  background:transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+.show-author:hover{
+background-color: rgba(0, 0, 0, 0.061);
+border: 5px solid rgb(255, 255, 255);
+
+
+}
+
+
+

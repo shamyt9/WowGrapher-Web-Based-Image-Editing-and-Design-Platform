@@ -1,0 +1,198 @@
+/* =================GOOGLE FONTS LINK=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Exo:wght@400;500;600&family=Merriweather:wght@300&display=swap');
+
+/* =====================CSS VARIABLES=============================== */
+:root {
+    --header-height:3.5rem;
+    /* =================CSS COLORS================================== */
+    /* =================hsl(hue saturation and Light)=============== */
+    --first-color:hsl(219,69%,56%);
+    --first-color-alt:hsl(219,69%,52%);
+    --title-color:hsl(299,8%,95%);
+    --text-color:hsl(299,8%,75%);
+    --text-color-light:hsl(299,4%,55%);
+    --white-color:#fff;
+    --body-color:hsl(299,4%,4%);
+    --container-color:hsl(299,4%,7%);
+
+
+    /* ==================FONT TYPOGRAPHY============================= */
+    /*  1rem=16px  */
+    --body-font:'Exo' , sans-serif;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1rem;
+    --normal-font-size:.940rem;
+    --small-font-size:.800rem;
+    --smaller-font-size:.700rem;
+
+    /* =============FONT WEIGHT====================================== */
+    --font-medium:500;
+    --font-semibold:600;
+    /* ================z-index===================================== */
+    --z-tooltip:10;
+    --z-fixed:100;
+
+
+}
+ /* ====================RESPONSIVE TYPOGRAPHY======================= */
+ @media screen and (min-width:968px) {
+    :root{
+        --h1-font-size:2.25rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size:1.25rem;
+        --normal-font-size:1rem;
+        --small-font-size:.900rem;
+        --smaller-font-size:.800rem;
+    
+
+    }
+   
+        
+ }
+
+ /* ====================BASIC  STYLING================================= */
+ *{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+ }
+ html{
+    scroll-behavior: smooth;
+ }
+ body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+
+ }
+ h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-semibold);
+
+ }
+ ul{
+    list-style: none;
+
+ }
+ a{
+    text-decoration: none;
+ }
+ img{
+    max-width: 100%;
+    height: auto;
+
+ }
+
+ /* ==========================REUSABLE CLASSES ================================ */
+ .container{
+    max-width: 1024px;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+   
+
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.section{
+    padding: 4.5rem 0 2rem;
+
+}
+.section__title{
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+}
+.main{
+    overflow: hidden;
+}
+
+/* =======================HEADER AND NAV CSS ======================= */
+.header{
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;  /*to check*/
+    align-items: center;
+}
+.nav__logo,
+.nav__toggle{
+    color: var(--text-color);
+    display: inline-flex; /*to check*/
+}
+.nav__logo{
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+.nav__logo i{
+    font-size: 1.25rem;
+
+}
+.nav__logo:hover{
+    color: var(--first-color);
+}
+.nav__toggle{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+@media screen and (max-width:766px){
+    .nav__menu{
+        position: fixed;
+        background-color: hsla(0, 0,100%, .1);
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(50px);
+        transition: .3s;
+
+    }
+}
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 2rem;
+    padding: 8rem;
+}
+.nav__list a{
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    transition: .3s;
+
+
+}
+.nav__list a:hover{
+    color: var(--first-color);
+
+
+}
+.nav__close{
+    font-size: 2rem;
+    color: var(--white-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+
+
+}
+/* =========SHOW MENU============ */
+.show-menu{
+    right: 0;
+}

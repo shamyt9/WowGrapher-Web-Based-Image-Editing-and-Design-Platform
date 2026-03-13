@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../img/bg14.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.custom-modal {
+    background: rgba(0, 0, 0, 0.258);
+    border-radius: 10px;
+
+    backdrop-filter: blur(25px);
+    overflow: hidden;
+    outline: none;
+    width: 500px;
+    display: flex;
+
+    margin: 7% auto;
+    bottom: 10%;
+    box-shadow: inset 2px 2px 2px white, 2px 4px 3px rgb(255, 0, 0);
+}
+@media (max-width: 515px) {
+    .custom-modal {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+.login-html #tab-1,
+#tab-2 {
+    display: none;
+}
+.login-html .tab {
+    cursor: pointer;
+    color: white;
+    padding: 5px;
+}
+.login-html .tab:hover {
+    background-color: rgb(15, 16, 16);
+    border-radius: 10px;
+    padding: 5px;
+}
+.login-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 525px;
+    min-height: 670px;
+    position: relative;
+}
+.login-form {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.login-html
+    .sign-in:checked
+    + .tab
+    + .sign-up
+    + .tab
+    + .login-form
+    .sign-in-htm {
+    transform: rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm {
+    transform: rotate(0);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 0.4s linear;
+}
+
+.login-html {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    /*background:rgba(40,57,101,.9);*/
+}
+
+.login-html .tab {
+    font-size: 22px;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab {
+    color: #fff;
+    border-color: #1161ee;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #979797;
+    font-size: 1.5em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.6s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 600;
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forgot {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input {
+    accent-color: #ffffff;
+    margin-right: 3px;
+}
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+.login-btn {
+    width: 100%;
+    height: 46px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+.login-btn:hover {
+    background-color: #0a1015;
+}
+.login-register {
+    font-size: 1em;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover {
+    text-decoration: underline;
+}
+.already:hover {
+    text-decoration: underline;
+}
+
+.register-icon {
+    color: white;
+}

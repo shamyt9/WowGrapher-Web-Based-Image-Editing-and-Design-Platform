@@ -1,0 +1,37 @@
+.ItemBgShow {
+    display: block;
+    transition: display 0.5s ease;
+}
+.fontStrokeShow {
+    display: block;
+    transition: display 0.5s ease;
+}
+.ItemhollowShow {
+    display: block;
+    transition: display 0.5s ease;
+}
+.ItemshadowShow {
+    display: block;
+    transition: display 0.5s ease;
+}
+.fontGlowShow {
+    display: block;
+    transition: display 0.5s ease;
+}
+.textTransparencyRangeShow {
+    visibility: visible;
+}
+.lockTextPositionShow {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #ff0000;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: inset 1px 1px 1px white;
+    border-radius: 1px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}

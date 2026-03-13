@@ -1,0 +1,906 @@
+/* element container=========================== */
+.elementContainer {
+    width: calc(100% - 19vh);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    background: #002c61;
+    box-shadow: 2px 2px 6px black;
+    height: 50px;
+    padding: 10px;
+}
+.elementContainer ul li {
+    list-style-type: none;
+    margin-top: 10px;
+}
+.elementContainer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.elementContainer ul #El-position {
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: rgb(0, 187, 255);
+    color: rgb(31, 31, 31);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset 2px 2px 1px white;
+    cursor: pointer;
+}
+.elementContainer ul #El-position:hover {
+    border-radius: 6px;
+    background-color: rgb(0, 158, 216);
+    box-shadow: none;
+    transition: 0.2s ease;
+    color: white;
+}
+.positionCont,
+.colorCont,
+.effectsCont,
+.ImageSize,
+.ImageBorder,
+.ImageShadow,
+.ImageEffect,
+.ImageRotation {
+    position: absolute;
+    left: -220px;
+    z-index: 10000;
+    height: calc(100% - 90px);
+    width: 220px;
+    bottom: 0;
+    background: #2e4053;
+    padding: 2px;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    border: 4px solid #3498db;
+    overflow-y: scroll;
+}
+.canvasBackgroundContainer {
+    position: absolute;
+    right: -280px;
+    z-index: 10000;
+    height: calc(100% - 90px);
+    width: 280px;
+    bottom: 0;
+    background: #2e4053;
+    padding: 2px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(35, 0, 0, 0.8);
+    /* border-top: 2px solid white; */
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+    overflow-y: scroll;
+}
+.show_canvasBackgroundContainer {
+    right: 0;
+}
+.canvasBackgroundContainer::-webkit-scrollbar {
+    width: 8px;
+}
+.canvasBackgroundContainer::-webkit-scrollbar-track {
+    background: #2e4053;
+}
+.canvasBackgroundContainer::-webkit-scrollbar-thumb {
+    background: #005f9f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.canvasBorderContainer {
+    position: absolute;
+    right: -280px;
+    z-index: 10000;
+    height: calc(100% - 90px);
+    width: 280px;
+    bottom: 0;
+    background: #2e4053;
+    padding: 2px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0 0 6px rgba(35, 0, 0, 0.8);
+    /* border-top: 2px solid white; */
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+}
+.show_canvasBorderContainer {
+    right: 0;
+}
+.positionCont::-webkit-scrollbar {
+    width: 8px;
+}
+.colorCont::-webkit-scrollbar {
+    width: 8px;
+}
+.ImageRotation::-webkit-scrollbar {
+    width: 8px;
+}
+
+.effectsCont::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+.ImageSize::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+.ImageBorder::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+.ImageShadow::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+.ImageEffect::-webkit-scrollbar {
+    width: 8px; /* width of the scrollbar */
+}
+.positionCont::-webkit-scrollbar-track {
+    background: #2e4053;
+}
+.ImageRotation::-webkit-scrollbar-track {
+    background: #2e4053;
+}
+.ImageRotation::-webkit-scrollbar-thumb {
+    background-color: #001c2f;
+}
+.colorCont::-webkit-scrollbar-track {
+    background: #2e4053;
+}
+
+.effectsCont::-webkit-scrollbar-track {
+    background: #2e4053; /* background color of the track */
+}
+.ImageSize::-webkit-scrollbar-track {
+    background: #2e4053; /* background color of the track */
+}
+.ImageBorder::-webkit-scrollbar-track {
+    background: #2e4053; /* background color of the track */
+}
+.ImageShadow::-webkit-scrollbar-track {
+    background: #2e4053; /* background color of the track */
+}
+.ImageEffect::-webkit-scrollbar-track {
+    background: #2e4053; /* background color of the track */
+}
+
+.positionCont::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.colorCont::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.effectsCont::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.ImageSize::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.ImageBorder::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.ImageShadow::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+.ImageEffect::-webkit-scrollbar-thumb {
+    background: #001c2f; /* color of the scrollbar thumb */
+    /* radius of the scrollbar thumb */
+}
+
+.show-positionCont,
+.show-colorCont,
+.show-effects,
+.add-imageSize,
+.add-imageBorder,
+.add-imageShadow,
+.add-imageEffect,
+.show-ImageRotation {
+    left: 0;
+}
+.adds-ElpositionEdit {
+    color: black;
+    background: aqua;
+    font-size: 20px;
+    margin-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: inset 1px 1px 1px white;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+.positionCont .positionHeader .layers,
+.colors,
+.effects {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: verdana;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: inset -2px -2px 2px white;
+    user-select: none;
+}
+
+.textEdit,
+.imageEdit {
+    display: none;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    user-select: none;
+}
+.color {
+    margin-top: 8px;
+}
+.color img {
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.Fontbg img {
+    margin-top: 8px;
+    border: 2px solid black;
+}
+#fontColorShow {
+    cursor: pointer;
+}
+.colorCont #fontColor {
+    appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    width: 90%;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.colorCont label {
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+}
+
+.fontColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.fontColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+.fontColor::-moz-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+.colorCont .chooseColorCont {
+    border: 1px solid rgb(151, 151, 151);
+    padding: 10px;
+    user-select: none;
+}
+
+/* effects */
+.effectText p {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #ccc;
+    color: rgb(76, 76, 76);
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: inset 1px 1px 1px white;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+.textTransparency p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #ccc;
+    color: rgb(76, 76, 76);
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: inset 1px 1px 1px white;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    position: absolute;
+    margin-top: -7px;
+}
+.effectText p:hover {
+    color: black;
+    background: aqua;
+}
+.effectText .add-effects {
+    color: black;
+    background: aqua;
+    user-select: none;
+}
+
+.effectOptionCont {
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.effectOptionCont p {
+    margin-right: 10px; /* Adjust spacing between label and input */
+    font-weight: bold; /* Enhance readability */
+}
+
+.effectOptionCont input[type='color'] {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    border: 1px solid #ccc; /* Add a simple border */
+    border-radius: 4px; /* Add slight rounding */
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease; /* Add smooth transition */
+}
+
+.effectOptionCont input[type='color']:focus {
+    border-color: #999; /* Change border color on focus for visual feedback */
+}
+.effectOptionCont .effectsTools {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.effectsTools p {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 3px;
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.effectsTools p:hover {
+    border: 4px solid black;
+    scale: 1.1;
+    transition: 0.2s ease;
+}
+.effectsTools .fontnone {
+    font-size: 60px;
+    border: 3px dotted rgb(94, 94, 94);
+}
+.effectsTools .fontBgCol {
+    background: #999;
+    border: 3px dotted rgb(94, 94, 94);
+}
+.effectsTools .fontStroke {
+    -webkit-text-stroke: 2px black;
+    font-size: 60px;
+    color: transparent;
+    border: 3px dotted rgb(94, 94, 94);
+}
+.effectsTools .fontHollow {
+    -webkit-text-stroke: 2px black;
+    font-size: 60px;
+    color: red;
+    border: 3px dotted rgb(94, 94, 94);
+}
+.effectsTools .fontShadow {
+    font-size: 60px;
+    text-shadow: 7px 2px 5px rgb(26, 26, 26);
+    border: 3px dotted rgb(94, 94, 94);
+}
+.effectsTools .fontGlow {
+    font-size: 60px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: red;
+    text-shadow: 3px 3px 20px red;
+    border: 3px dotted rgb(94, 94, 94);
+}
+
+/* EFFECTS ITEM BG  */
+.ItemBg,
+.Itemstroke,
+.Itemhollow,
+.Itemshadow,
+.Itemglow {
+    display: none;
+}
+.ItemBg #textBackground,
+.strokeColorCont #strokeColor,
+#hollowColor,
+.ShadowColorCont #shadowColor {
+    width: 100%;
+    height: 30px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 1px red, -2px -2px 1px rgb(0, 255, 0);
+    outline: none;
+    margin: auto;
+    padding: 2px;
+    overflow: hidden;
+    background: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    cursor: pointer;
+}
+.effectsItems .textEditCont {
+    border: 2px solid rgb(128, 227, 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 5px;
+}
+.effectsItems .label {
+    margin-top: 3px;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.effectsItems .rangeValue {
+    background: transparent;
+    color: white;
+    width: 100%;
+    margin-top: 3px;
+    box-shadow: 1px 1px 1px black, inset 2px 3px 3px skyblue;
+    padding: 5px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-radius: 10px;
+}
+/* !IMAGE ROTATE CODE */
+.Imageflip {
+    margin-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+.Imageflip p,
+.imageRotateContainer p {
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px solid whitesmoke;
+}
+.flipIconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.imageRotateContainer {
+    margin-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+.flipIconContainer i {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.flipTop,
+.flipRight {
+    transition: 0.3s ease;
+}
+
+.flipRight:hover {
+    transform: rotateY(180deg) !important;
+}
+.flipTop:hover {
+    transform: rotateX(180deg) !important;
+}
+#imageRotateValue {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    width: 90%;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/*!TEXT TRANSPARENCY */
+.textTransparencyRange {
+    top: 40px;
+    position: relative;
+    visibility: hidden;
+}
+/*?TO LOCKING TEXT */
+.textUnlocked {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #ccc;
+    color: rgb(76, 76, 76);
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: inset 1px 1px 1px white;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+}
+
+/*? Image adding content styling*/
+.imageEdit p {
+    font-size: 22px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    box-shadow: inset 2px 2px 1px rgb(0, 31, 82), 2px 2px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.imageEdit p:hover {
+    background-color: red;
+    transition: 0.2s ease;
+    box-shadow: inset 2px 2px 1px rgb(82, 0, 0), 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+/* ! NEW LAYER LIST ADDED STYLING */
+.positionCont {
+    display: flex;
+    flex-direction: column;
+}
+#layersList {
+    width: 230px;
+    margin-left: -30px;
+    margin-top: 60px;
+}
+.layerBox {
+    color: white;
+    font-size: 16px;
+    border: 1px dotted white;
+    padding: 10px;
+    background-color: #3498db;
+    margin-top: 5px;
+    list-style-type: none;
+    border-radius: 10px;
+    position: relative;
+    left: 2px;
+}
+
+/* ! UNDO BUTTON STYLING */
+#undoButton {
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background-color: rgb(0, 187, 255);
+    color: rgb(31, 31, 31);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset 2px 2px 1px white;
+}
+#undoButton:hover {
+    border-radius: 6px;
+    background-color: rgb(0, 158, 216);
+    box-shadow: none;
+    transition: 0.2s ease;
+    color: white;
+}
+/* ! IMAGE STYLING CONTAINER STARTS HERE */
+.slider-label {
+    font-weight: bold;
+}
+.Imagewidth,
+.imageBorder,
+.ImageShadow,
+.boxShadowX,
+#imageBlurContainer {
+    margin-top: 60px;
+}
+.Imagewidth,
+.Imageheight,
+.borderRadius,
+.imageBorderWidth,
+.imageBorderColor,
+.boxShadowX,
+.boxShadowY,
+.boxShadowBlur,
+.boxShadowColor,
+.slider-container,
+.ImageDefaultSize {
+    background-color: #003e67;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 1px aqua, -2px -2px 8px aqua;
+}
+.ImageDefaultSize {
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.ImageDefaultSize:hover {
+    box-shadow: inset 2px 2px 1px rgb(255, 0, 0), -2px -2px 8px rgb(255, 0, 0);
+    color: red;
+}
+.imageBorderStyle {
+    border: 2px solid rgb(0, 68, 145);
+    outline: none;
+    background: #001c2f;
+    padding: 2px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: inset 2px 2px 1px yellow;
+}
+/* ! CANVAS SIZE MANUAL SETTING INPUT */
+#canvasWidthHeight input {
+    background: transparent;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #e1e1e1;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+#canvasWidthHeight #setSize {
+    background: rgb(1, 176, 245);
+    color: white;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 5px;
+    box-shadow: inset 2px 2px 1px white;
+    transition: 0.2s ease;
+}
+#canvasWidthHeight #setSize:hover {
+    background: rgb(3, 9, 33);
+    box-shadow: none;
+    transform: none;
+}
+/* !FOR CANVAS BACKGROUND STYLING */
+#backgroundForCanvas {
+    background: transparent;
+    width: 100%;
+
+    outline: none;
+
+    color: rgb(0, 149, 255);
+    font-weight: bold;
+    padding: 2px;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin-left: 3px;
+}
+#backgroundForCanvas option {
+    background-color: #0552e0f3; /* Light gray background for options */
+    color: rgb(238, 238, 238);
+    font-weight: bold;
+}
+.usingSolidBg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+}
+.usingSolidBg input {
+    width: 30px;
+    outline: none;
+    border: 2px solid white;
+    margin-left: 5px;
+    height: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 30px;
+    background-image: conic-gradient(red, yellow, green, blue, black);
+    box-shadow: 0 0 10px rgba(35, 0, 0, 0.8);
+    transition: 0.2s ease;
+}
+.canvasBackgroundContainer .canvasBgLabel {
+    color: white;
+    font-size: 30px;
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+}
+.usingSolidBg input:hover {
+    background-image: conic-gradient(red, yellow, green, pink, black);
+    transform: rotate(90deg);
+}
+.gradientContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    gap: 10px;
+}
+.canvasBackgroundContainer .gradientBg {
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(35, 0, 0, 0.8);
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+#gradientBg1 {
+    background-image: linear-gradient(to bottom, red, yellow);
+}
+#gradientBg2 {
+    background-image: linear-gradient(to bottom, yellow, green);
+}
+#gradientBg3 {
+    background-image: linear-gradient(
+        to top,
+        rgb(255, 128, 23),
+        rgb(0, 255, 0)
+    );
+}
+#gradientBg4 {
+    background-image: linear-gradient(45deg, green, blue);
+}
+#gradientBg5 {
+    background-image: linear-gradient(45deg, rgb(5, 255, 234), rgb(255, 0, 0));
+}
+#gradientBg6 {
+    background-image: linear-gradient(
+        45deg,
+        rgb(5, 255, 234),
+        rgb(255, 234, 0)
+    );
+}
+#gradientBg7 {
+    background-image: linear-gradient(
+        45deg,
+        rgb(158, 0, 225),
+        rgb(0, 183, 255)
+    );
+}
+#gradientBg8 {
+    background-image: linear-gradient(
+        45deg,
+        rgb(225, 0, 176),
+        rgb(0, 183, 255)
+    );
+}
+#gradientBg9 {
+    background-image: linear-gradient(
+        45deg,
+        rgb(56, 232, 255),
+        rgb(0, 133, 185)
+    );
+}
+#gradientBg10 {
+    background-image: linear-gradient(
+        45deg,
+        rgb(185, 56, 255),
+        rgb(71, 185, 0)
+    );
+}
+#gradientBg11 {
+    background-image: radial-gradient(
+        circle,
+        rgb(56, 232, 255),
+        rgb(0, 133, 185)
+    );
+}
+#gradientBg12 {
+    background-image: radial-gradient(
+        circle,
+        rgb(241, 189, 255),
+        rgb(255, 0, 238)
+    );
+}
+/* ? styling the cutom bg  */
+.selectCustomBg {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border: 2px dotted #066dfd; /* Dotted border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    margin: 35px; /* Centered margin */
+}
+
+.selectCustomBg input[type='file'] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.uploadText {
+    position: absolute;
+    color: #999; /* Text color */
+    font-size: 36px; /* Text size */
+    pointer-events: none; /* Allows clicking through to the file input */
+    user-select: none; /* Prevents text selection */
+    top: 0;
+    left: 0;
+    transform: translate(35%, 15%);
+}
+
+/* !CANVAS BORDER SETTING */
+.canvasBorderContainer label {
+    font-size: 20px;
+    font-family: verdana;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.canvasBorderContainer input {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px dotted rgb(25, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: verdana;
+    padding: 5px;
+    margin-top: 10px;
+}
+.canvasBorderStyle {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px dotted rgb(25, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: verdana;
+    padding: 5px;
+    margin-top: 10px;
+}
+#CanvasColor {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 30px;
+    cursor: pointer;
+    background: conic-gradient(red, green, blue, orange, aqua, yellow);
+}
+.canvasBorderRTadius {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.canvasBorderWidth,
+.canvasBorderType,
+.canvasBorderColor {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 15px;
+}

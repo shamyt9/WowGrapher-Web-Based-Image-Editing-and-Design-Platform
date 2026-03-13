@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdffe1;
+    margin: 0;
+    padding: 1vh;
+}
+
+.Econtainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 16px black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tools-container {
+    width: 20%;
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+
+    background: rgb(154, 171, 255);
+    background: radial-gradient(
+        circle,
+        rgba(154, 171, 255, 1) 9%,
+        rgba(255, 200, 211, 1) 100%
+    );
+}
+
+/* Style for the inversion input */
+.controls label[for='invert'] {
+    margin-right: 10px;
+}
+
+.controls input[type='range']#invert {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.controls input[type='range'] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.controls input[type='range']::-webkit-slider-runnable-track {
+    background: linear-gradient(
+        94deg,
+        rgba(252, 176, 69, 1) 20%,
+        rgba(253, 29, 29, 1) 45%,
+        rgba(57, 0, 0, 1) 84%
+    );
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), inset 1px 1px 1px white;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.controls input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tools-container input[type='file'],
+.tools-container input[type='range'] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.preview-container {
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-container canvas {
+    border: 1px solid #a2a2a2;
+    max-width: 100%;
+    max-height: 700px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+#downloadBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#downloadBtn:hover {
+    background-color: #0056b3;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .tools-container {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .preview-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
