@@ -10,19 +10,26 @@ The root folder now contains project metadata and assets (for example this READM
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Core Features](#core-features)
-3. [Technology Stack](#technology-stack)
-4. [Repository Structure](#repository-structure)
-5. [Getting Started (Local Setup)](#getting-started-local-setup)
-6. [Configuration](#configuration)
-7. [How to Run](#how-to-run)
-8. [Admin Panel](#admin-panel)
-9. [Key Modules](#key-modules)
-10. [Troubleshooting](#troubleshooting)
-11. [Security Notes](#security-notes)
-12. [Contributing](#contributing)
-13. [License](#license)
+- [Wow Grapher](#wow-grapher)
+    - [Table of Contents](#table-of-contents)
+    - [Project Overview](#project-overview)
+    - [Core Features](#core-features)
+    - [Technology Stack](#technology-stack)
+    - [Repository Structure](#repository-structure)
+    - [Getting Started (Local Setup)](#getting-started-local-setup)
+        - [Prerequisites](#prerequisites)
+        - [1. Clone the repository](#1-clone-the-repository)
+        - [2. Place in your web server root](#2-place-in-your-web-server-root)
+        - [3. Configure database connection](#3-configure-database-connection)
+        - [4. Import database schema](#4-import-database-schema)
+        - [5. Install Composer dependencies (if needed)](#5-install-composer-dependencies-if-needed)
+    - [Configuration](#configuration)
+    - [How to Run](#how-to-run)
+    - [Admin Panel](#admin-panel)
+    - [Key Modules](#key-modules)
+    - [Troubleshooting](#troubleshooting)
+    - [Security Notes](#security-notes)
+    - [Contributing](#contributing)
 
 ## Project Overview
 
@@ -204,9 +211,3 @@ Before production use, review and harden:
 2. Create a feature branch
 3. Commit your changes
 4. Open a pull request with a clear description
-
-## License
-
-No explicit license file is currently present in the repository root.
-
-If you want this project to be open source, add a license file (for example MIT) and update this section.
